@@ -1,7 +1,5 @@
 <script setup>
 import { RouterView } from 'vue-router';
-
-
 </script>
 
 <template>
@@ -11,10 +9,8 @@ import { RouterView } from 'vue-router';
     <div class="test">测试颜色</div>
 </template>
 
-
 <style lang="scss">
 .test{
     color: $priceColor;
 }
-
 </style>
