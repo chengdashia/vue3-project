@@ -20,7 +20,7 @@ onMounted(() => {
     <HomePanel :title="cate.name" v-for="cate in goodsProduct" :key="cate.id">
       <div class="box">
         <RouterLink class="cover" to="/">
-          <img :src="cate.picture" />
+          <img v-img-lazy="cate.picture" />
           <strong class="label">
             <span>{{ cate.name }}馆</span>
             <span>{{ cate.saleInfo }}</span>
@@ -29,7 +29,7 @@ onMounted(() => {
         <ul class="goods-list">
           <li v-for="good in cate.goods" :key="good.id">
             <RouterLink to="/" class="goods-item">
-              <img :src="good.picture" alt="" />
+              <img v-img-lazyf="good.picture" alt="" />
               <p class="name ellipsis">{{ good.name }}</p>
               <p class="desc ellipsis">{{ good.desc }}</p>
               <p class="price">&yen;{{ good.price }}</p>
