@@ -1,11 +1,19 @@
 <script setup lang="ts">
-import HomeCategory from './HomeCategory.vue';
+import HomeBanner from './HomeBanner.vue'
+import HomeCategory from './HomeCategory.vue'
+import HomeHot from './HomeHot.vue'
+import HomeNew from './HomeNew.vue'
+import HomeProduct from './HomeProduct.vue'
 
 
 </script>
 
 <template>
-    <div>
+    <div class="container">
         <HomeCategory/>
+        <HomeBanner/>
     </div>
-</template>
+    <HomeNew/>
+    <HomeHot/>
+    <HomeProduct/>
+</template>+
