@@ -1,3 +1,11 @@
+<script setup lang="ts">
+import HomeCategory from './HomeCategory.vue';
+
+
+</script>
+
 <template>
-    <div style="height: 1200px;">我是home页</div>
+    <div>
+        <HomeCategory/>
+    </div>
 </template>
