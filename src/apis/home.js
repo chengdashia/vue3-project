@@ -6,3 +6,17 @@ export const getBannerApi = () => {
         method: 'get'
     })
 }
+
+export const findNewAPI = () => {
+  return httpInstance({
+    url:'/home/new',
+    method:'get'
+  })
+}
+
+export const getHotAPI = () => {
+  return  httpInstance({
+    url:'home/hot', 
+    method:'get'
+  })
+}
