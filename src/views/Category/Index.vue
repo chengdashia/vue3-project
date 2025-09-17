@@ -10,9 +10,10 @@ const categoryData = ref({})
 const route = useRoute()
 const getCategory = async (id) => {
   const res = await getTopCategoryAPI(id)
-  console.log(res)
-  
+
+  console.log("category",res);
   categoryData.value = res.data.result
+  console.log("categoryData",categoryData.value.children)
 }
 
 const bannerList = ref([])
@@ -20,7 +21,6 @@ const getBanner = async () => {
     const res = await getBannerApi({
       distributionSite: '2'
     })
-    console.log(res)
     bannerList.value =res.data.result
 }
 
@@ -66,7 +66,7 @@ onMounted(() => {
           <h3>- {{ item.name }}-</h3>
         </div>
         <div class="body">
-          <GoodsItem v-for="good in item.goods" :goods="good" :key="good.id" />
+          <GoodsItem v-for="good in item.goods" :good="good" :key="good.id" />
         </div>
       </div>
     </div>
